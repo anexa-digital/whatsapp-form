@@ -2,16 +2,18 @@ const template = document.createElement("template");
 template.innerHTML = `
 <head>
   <title>Custom Element Example</title>
-      <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@3.3.3/dist/tailwind.min.css"
       rel="stylesheet"
     />
 </head>
 
       
     <div>
-        <label> Mensaje WhatsApp </label>
-        <input type="text" id="input-field" />
+        <label class="block mb-2 text-sm font-medium text-gray-900"> Mensaje WhatsApp </label>
+        <input type="text" id="input-field"  class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500"/>
         <button id="action-button">Enviar WhatsApp</button>
 
     </div>
