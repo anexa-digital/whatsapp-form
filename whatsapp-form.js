@@ -2,41 +2,12 @@ const template = document.createElement("template");
 template.innerHTML = `
 <head>
   <title>Custom Element Example</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
 </head>
 
-  <style>
-    /* Add styling for your custom element */
-    :host {
-      display: block;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    button {
-      background-color: rgb(97, 206, 112);
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-      </style>
       
     <div>
         <label> Mensaje WhatsApp </label>

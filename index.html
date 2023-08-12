@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Element Example</title>
+    <link
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <script src="https://aportarvida.s3.amazonaws.com/whatsapp-form.js"></script>
+  <script src="./whatsapp-form.js"></script>
   <body>
+    <div class="mb-6">
+      <label
+        for="large-input"
+        class="block mb-2 text-sm font-medium text-gray-900"
+        >Large input</label
+      >
+      <input
+        type="text"
+        id="large-input"
+        class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500"
+      />
+      <button
+        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Enviar Whatsapp
+      </button>
+    </div>
     <whatsapp-form
       title="Mensaje Whatsapp"
       message="Envíame los videos...1"
