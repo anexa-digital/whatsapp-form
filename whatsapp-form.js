@@ -3,45 +3,16 @@ template.innerHTML = `
 <head>
   <title>Custom Element Example</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 </head>
 
-  <style>
-    /* Add styling for your custom element */
-    :host {
-      display: block;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    button {
-      background-color: rgb(97, 206, 112);
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-      </style>
       
     <div>
         <label> Mensaje WhatsApp </label>
         <input type="text" id="input-field" />
-        <button id="action-button">Enviar WhatsApp</button>
+        <button id="action-button" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Enviar WhatsApp</button>
 
     </div>
 
@@ -50,10 +21,13 @@ template.innerHTML = `
 class CustomElement extends HTMLElement {
   constructor() {
     super();
+    let script = document.createElement("script");
+    script.textContent = '  console.log("script runs in Global scope!!"); ';
+    script.src = "https://cdn.tailwindcss.com";
 
     // Create a shadow DOM for encapsulation
     const shadow = this.attachShadow({ mode: "open" });
-
+    shadow.appendChild(script);
     shadow.append(template.content.cloneNode(true));
 
     // Get references to the input and button elements
